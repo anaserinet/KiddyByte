@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Winky Rough Black';
+    src: url('./WinkyRough-Black.ttf') format('truetype');
+  }
+
+:root {
+  --light-green: #dce795;
+  --medium-green: #a0c378;
+  --navy-blue: #133a5a;
+  --orange: #e85e03;
+}
+
+.main-content{
+    text-align: center;
+    margin-top: 2rem;   
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-green);
+  color: var(--navy-blue);
+}
+
+#tabs1 {
+  background-color: var(--medium-green);
+  padding: 0.2rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+#tabs2 {
+    background-color: var(--light-green);
+    padding: 0.2rem;
+    text-align: center;
+    font-family: "Winky Rough Black";
+    font-size: 0.8rem;
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* add this */
+    gap: 3rem;            
+    text-align: center; /* optional */
+  }
+  
+  .side-by-side2 {
+    display: flex;
+    align-items: center; 
+    gap: 1rem;
+    justify-content: center; /* added this too */
+  }
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.intro {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+
+    .buttons a {
+      text-decoration: none;
+      padding: 1rem 2rem;
+      background-color: var(--navy-blue);
+      color: white;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: var(--orange);
+    }
+
+    footer {
+      background-color: var(--orange);
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
