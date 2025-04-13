@@ -1,101 +1,223 @@
-@font-face {
-    font-family: 'Winky Rough Black';
-    src: url('./WinkyRough-Black.ttf') format('truetype');
-}
-
-:root {
-    --light-green: #dce795;
-    --medium-green: #a0c378;
-    --navy-blue: #133a5a;
-    --orange: #e85e03;
-}
-
-.mainbody3 {
-    background-color: #A0C878;
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 10px;
-    flex-wrap: wrap;
-    font-family: monospace;
+* {
     margin: 0;
     padding: 0;
-    color: #000;
+    box-sizing: border-box;
 }
 
-.body {
-    background-color: #A0C878;
+body {
+    background-color: #143D60;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-around;
-    padding: 30px 10px;
-    flex-wrap: wrap;
-    font-family: monospace;
-    margin: 0;
-    padding: 0;
-    color: #000;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
 }
 
-button {
-    padding: 8px 16px;
-    font-family: monospace;
-    border: 2px solid black;
-    background: white;
-    cursor: pointer;
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    color: #DDEB9D;
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: white;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
 }
 
 .plans {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .plan-card {
-    position: relative;
-    background-color: #DDEB9D;
-    padding: 25px;
-    width: 250px;
-    border-radius: 25px;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .plan-card:hover {
+    transform: translateY(-8px);
+}
+
+.plan-header {
+    padding: 24px;
     position: relative;
+}
+
+.basic .plan-header {
+    background-color: #A0C878;
+}
+
+.premium .plan-header {
+    background-color: #DDEB9D;
+}
+
+.premium-plus .plan-header {
     background-color: #EB5B00;
-    padding: 25px;
-    width: 250px;
-    border-radius: 25px;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.plan-card h2 {
-    margin-top: 0;
+.plan-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-right: 30px;
 }
 
-.price {
-    font-size: 22px;
-    font-weight: bold;
+.basic .plan-title {
+    color: #143D60;
 }
 
-.plan-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0;
+.premium .plan-title {
+    color: #143D60;
 }
 
-.plan-card ul li {
-    margin-bottom: 8px;
+.premium-plus .plan-title {
+    color: white;
 }
 
-.price {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.icon {
+.plan-icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
+    top: 24px;
+    right: 24px;
+    font-size: 26px;
+}
+
+.plan-price {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.basic .plan-price {
+    color: #143D60;
+}
+
+.premium .plan-price {
+    color: #143D60;
+}
+
+.premium-plus .plan-price {
+    color: white;
+}
+
+.plan-price span {
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.plan-features {
+    padding: 24px;
+    background-color: white;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #143D60;
+}
+
+.feature-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+.icon-included {
+    background-color: #A0C878;
+    color: white;
+}
+
+.icon-excluded {
+    background-color: #f1f1f1;
+    color: #999;
+}
+
+.join-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.basic .join-button {
+    background-color: #A0C878;
+    color: #143D60;
+}
+
+.basic .join-button:hover {
+    background-color: #143D60;
+    color: white;
+}
+
+.premium .join-button {
+    background-color: #A0C878;
+    color: white;
+}
+
+.premium .join-button:hover {
+    background-color: #DDEB9D;
+    color: #143D60;
+}
+
+.premium-plus .join-button {
+    background-color: #EB5B00;
+    color: white;
+}
+
+.premium-plus .join-button:hover {
+    background-color: #143D60;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 42px;
+    }
+    
+    .plan-card {
+        width: 100%;
+        max-width: 340px;
+    }
 }
