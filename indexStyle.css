@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'League Spartan Medium';
+    src: url('./LeagueSpartan-Medium.ttf') format('truetype');
+
+    font-family: 'League Spartan Bold';
+    src: url('./LeagueSpartan-Bold.ttf') format('truetype');
+
+    font-family: 'Heebo Black';
+    src: url('./Heebo-Black.ttf') format('truetype');
+
+    font-family: 'Gagalin Regular';
+    src: url('./Gagalin-Regular.otf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #153552;
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.logo {
+    color: #FF5E00;
+    font-family: "Gagalin Regular";
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    margin-top: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.main-heading {
+    color: #FF5E00;
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 18px;
+    font-family: 'Heebo Black';
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 320px;
+}
+
+.kids-container {
+    position: relative;
+    width: 400px;
+    height: 320px;
+}
+
+.kid-image {
+    position: absolute;
+}
+
+.kid-image.left {
+    left: 0;
+    bottom: 40px;
+    height: 180px;
+}
+
+.kid-image.middle {
+    left: 150px;
+    bottom: 0;
+    height: 150px;
+}
+
+.kid-image.right {
+    right: 0;
+    bottom: 40px;
+    height: 180px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 20px;
+    background-color: white;
+    color: #153552;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 200px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Modal/Popup styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    display: flex;
+    width: 800px;
+    max-width: 90%;
+    background-color: #153552;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-image {
+    width: 40%;
+    background-image: url("./classroom.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-content {
+    width: 60%;
+    padding: 30px;
+    background-color: white;
+    color: #333;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    background: none;
+    border: none;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.terms {
+    color: #FF5E00;
+    text-decoration: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #00BCD4;
+    /* Bright cyan similar to example */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.login-btn {
+    color: #00BCD4;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.modal-image-title {
+    color: #153552;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.modal-image-text {
+    color: #153552;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+    line-height: 1.4;
+}
