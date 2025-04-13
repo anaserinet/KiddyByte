@@ -2,172 +2,159 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-
-    <div class="side-by-side">
-        <p id="tabs2"> ☻ KiddyByte Fun </p>
-        <div class="side-by-side2">
-            <button>Reading</button>
-            <button>Math</button>
-            <button>Science</button>
-            <button>Creativity</button>
-        </div>
-    </div>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiddyByte - Learning Made Simple</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="entryPageStyle.css">
 </head>
 
-<body class=main-content>
-    <img src="./logo.png" alt="KiddyByte logo" width="200" />
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="#" class="nav-link">ABOUT US</a>
+        </nav>
 
-    <h1 id="mainTitle">Learning made exciting</h1>
-    <h1> for young minds!</h1>
-    <p id="subtext">Sign up today and learn with Kiddybyte.</p>
-    <p id=makeInvisible> . </p>
+        <header class="header">
+            <div class="logo">KIDDYBYTE</div>
+            <div class="tagline">-LEARNING MADE SIMPLE-</div>
+        </header>
 
-    <div class="buttons">
-        <a href="#signup">Sign Up</a>
-        <a href="#login">Log In</a>
-    </div>
-
-    <h1> </h1>
-    <p id=makeInvisible> . </p>
-
-
-    <div class="features">
-        <div class="feature">
-            <div class="feature-icon">🔁</div>
-            <h3>Colorful World of Learning</h3>
-            <p>Embark on educational quests filled with joy and knowledge.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🌙</div>
-            <h3>Sweet Dreams Learning</h3>
-            <p>Drift into a world of learning and wake up smarter.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🔥</div>
-            <h3>No More Worries</h3>
-            <p>Explore a world of fun learning and endless possibilities.</p>
-        </div>
-    </div>
-
-    <div class="community-section">
-        <h2>Join KiddyByte's community today and share your children's experience with personalized learning</h2>
-
-        <div class="testimonials">
-            <div class="testimonial">
-                <div class="quote">“</div>
-                <p>Kids love these personalized lessons!</p>
-                <div class="author">
-                    <img src="https://via.placeholder.com/32" alt="Oliver R." />
-                    <div>
-                        <strong>Oliver R.</strong><br />Principal of School
-                    </div>
+        <main class="main-content">
+            <div class="text-content">
+                <h1 class="main-heading">Make learning fun<br>for young minds</h1>
+                <p class="description">
+                    KiddyByte gives kids the opportunity to have personalized and continuous
+                    learning by utilizing AI tools and trusted material to generate their own
+                    personal teacher!
+                </p>
+                <div class="buttons">
+                    <a href="#" class="btn" id="signup-btn">GET STARTED!</a>
+                    <a href="#" class="btn" id="login-btn">LOG IN</a>
                 </div>
             </div>
-
-            <div class="testimonial">
-                <div class="quote">“</div>
-                <p>This website sparks joy and learning for my son. 10/10!</p>
-                <div class="author">
-                    <img src="https://via.placeholder.com/32" alt="Emma L." />
-                    <div>
-                        <strong>Emma L.</strong><br />Storyteller
-                    </div>
+            <div class="image-content">
+                <div class="kids-image">
+                    <img src="./kids.png" alt="Animated image of 3 kids" width="400" />
                 </div>
             </div>
-
-            <div class="testimonial">
-                <div class="quote">“</div>
-                <p>Learning that is adaptive to my kid'
-            </div>
-        </div>
-        <h1> </h1>
+        </main>
     </div>
 
-    <section class="mainbody3">
-        <h1>Choose your adventure</h1>
-        <p class="subtext">We recommend consulting with your school before purchasing. Your school might already have a
-            license!</p>
-
-        <div class="plans">
-            <div class="plan-card light">
-                <h2>Basic Plan</h2>
-                <span class="price">$0/ month</span>
-                <ul>
-                    <li>✔️ Basic learning tools</li>
-                    <li>❌ Interactive stories</li>
-                    <li>❌ Safe learning environment</li>
-                </ul>
-                <button>JOIN BASIC</button>
-                <span class="icon">🎁</span>
+    <!-- Sign Up -->
+    <div class="modal-overlay" id="signup-modal">
+        <div class="modal">
+            <div class="modal-image">
             </div>
-
-            <div class="plan-card">
-                <h2>Premium Plan</h2>
-                <span class="price">$19/ month</span>
-                <ul>
-                    <li>✔️ Basic learning tools</li>
-                    <li>✔️ Progress tracking</li>
-                    <li>❌ Engage with other young learners</li>
-                </ul>
-                <button>JOIN PREMIUM</button>
-                <span class="icon">⭐</span>
-            </div>
-
-            <div class="plan-card light">
-                <h2>Premium Plus Plan</h2>
-                <span class="price">$29/ month</span>
-                <ul>
-                    <li>✔️ Basic learning tools</li>
-                    <li>✔️ Process tracking</li>
-                    <li>✔️ Adaptive plan depending on how your child responds to lessons</li>
-                </ul>
-                <button>JOIN PREMIUM PLUS</button>
-                <span class="icon">💎</span>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="modal-close">&times;</button>
+                    <h2 class="modal-title">Sign Up</h2>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" class="input-field" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Create password" class="input-field" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms-checkbox" required>
+                        <label for="terms-checkbox">I agree the <a href="#" class="terms">Terms & Conditions</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                    <div class="login-link">
+                        <span class="login-text">Already have an account? </span>
+                        <a href="#" class="login-btn" id="switch-to-login">Login</a>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
 
-
-    <footer class="footer">
-        <div class="footer-brand">
-            <h3>😊 FunLand</h3>
+    <!-- Login -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal">
+            <div class="modal-image">
+            </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="modal-close">&times;</button>
+                    <h2 class="modal-title">Login</h2>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" class="input-field" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Password" class="input-field" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                    <div class="login-link">
+                        <span class="login-text">Don't have an account? </span>
+                        <a href="#" class="login-btn" id="switch-to-signup">Sign Up</a>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="footer-columns">
-            <div>
-                <strong>Learn about us</strong>
-                <p>Discover more</p>
-                <p>Join our team</p>
-                <p>Media resources</p>
-                <p>Learning plans</p>
-            </div>
-            <div>
-                <strong>Assistance</strong>
-                <p>Kids' support team</p>
-                <p>Questions answered</p>
-                <p>Get help now</p>
-            </div>
-            <div>
-                <strong>Join the fun</strong>
-                <p>Fun learning on</p>
-                <p>Share on Instagram</p>
-                <p>Tweet with us</p>
-                <p>Interactive learning</p>
-            </div>
-            <div>
-                <strong>Download now</strong>
-                <button class="download-btn">📱 Available on <br> App Store</button>
-                <button class="download-btn">📲 Install on <br> Google Play</button>
-            </div>
-    </footer>
+    </div>
 
-</html>
+    <script>
+        const signupModal = document.getElementById('signup-modal');
+        const loginModal = document.getElementById('login-modal');
+        const signupBtn = document.getElementById('signup-btn');
+        const loginBtn = document.getElementById('login-btn');
+        const closeButtons = document.querySelectorAll('.modal-close');
+        const switchToLogin = document.getElementById('switch-to-login');
+        const switchToSignup = document.getElementById('switch-to-signup');
 
+        // Open signup modal
+        signupBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            signupModal.classList.add('active');
+        });
 
+        // Open login modal
+        loginBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            loginModal.classList.add('active');
+        });
 
+        // Close modals when clicking close button
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                signupModal.classList.remove('active');
+                loginModal.classList.remove('active');
+            });
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function (e) {
+            if (e.target === signupModal) {
+                signupModal.classList.remove('active');
+            }
+            if (e.target === loginModal) {
+                loginModal.classList.remove('active');
+            }
+        });
+
+        // Switch between modals
+        switchToLogin.addEventListener('click', function (e) {
+            e.preventDefault();
+            signupModal.classList.remove('active');
+            loginModal.classList.add('active');
+        });
+
+        switchToSignup.addEventListener('click', function (e) {
+            e.preventDefault();
+            loginModal.classList.remove('active');
+            signupModal.classList.add('active');
+        });
+    </script>
 
 </body>
 
